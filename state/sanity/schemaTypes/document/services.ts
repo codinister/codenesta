@@ -1,24 +1,20 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'textCard',
-  title: 'Text Card',
-  type: 'object',
+  name: 'services',
+  title: 'Services',
+  type: 'document',
   fields: [
     defineField({
       name: 'title',
       title: 'Title',
       type: 'string',
-    }),
-    defineField({
-      name: 'sub_title',
-      title: 'Sub Title',
-      type: 'string',
+      validation: (Rule) => Rule.required().error('Title field required!'),
     }),
     defineField({
       name: 'desc',
       title: 'Description',
-      type: 'string'
-    })
+      type: 'text',
+    }),
   ],
 });

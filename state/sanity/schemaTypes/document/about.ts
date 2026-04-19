@@ -12,24 +12,44 @@ export default defineType({
       validation: (Rule) => Rule.required().error('Title field required!'),
     }),
     defineField({
-      name: 'body',
-      title: 'Body',
-      type: 'blockContent',
+      name: 'desc',
+      title: 'Description',
+      type: 'text',
     }),
     defineField({
-      name: 'image',
-      title: 'Image',
-      type: 'imageObj',
+      name: 'fullname',
+      title: 'Full Name',
+      type: 'string',
     }),
     defineField({
-      name: 'cards',
-      title: 'Cards',
-      type: 'array',
-      of: [
-        {
-          type: 'imageCard',
-        },
-      ],
+      name: 'phone',
+      title: 'Phone',
+      type: 'string',
+    }),
+    defineField({
+      name: 'experience',
+      title: 'Experience',
+      type: 'string',
+    }),
+    defineField({
+      name: 'email',
+      title: 'Email',
+      type: 'string',
+    }),
+    defineField({
+      name: 'nationality',
+      title: 'Nationality',
+      type: 'string',
+    }),
+    defineField({
+      name: 'freelance',
+      title: 'Freelance',
+      type: 'string',
+    }),
+    defineField({
+      name: 'language',
+      title: 'Language',
+      type: 'string',
     }),
   ],
 });

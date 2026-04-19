@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'textCard',
-  title: 'Text Card',
+  name: 'link',
+  title: 'Links',
   type: 'object',
   fields: [
     defineField({
@@ -11,14 +11,9 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'sub_title',
-      title: 'Sub Title',
+      name: 'url',
+      title: 'Url',
       type: 'string',
     }),
-    defineField({
-      name: 'desc',
-      title: 'Description',
-      type: 'string'
-    })
   ],
 });

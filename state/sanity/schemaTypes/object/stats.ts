@@ -1,8 +1,8 @@
 import { defineField, defineType } from 'sanity';
 
 export default defineType({
-  name: 'textCard',
-  title: 'Text Card',
+  name: 'stats',
+  title: 'Stats',
   type: 'object',
   fields: [
     defineField({
@@ -16,9 +16,9 @@ export default defineType({
       type: 'string',
     }),
     defineField({
-      name: 'desc',
-      title: 'Description',
-      type: 'string'
-    })
+      name: 'total',
+      title: 'Total',
+      type: 'number',
+    }),
   ],
 });
