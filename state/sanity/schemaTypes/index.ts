@@ -13,6 +13,7 @@ import education from './document/education';
 import experience from './document/experience';
 import work from './document/work';
 import skills from './document/skills';
+import settings from './document/settings';
 
 export const schemaTypes = [
   blockContent,
@@ -30,4 +31,5 @@ export const schemaTypes = [
   work,
   home,
   services,
+  settings
 ];

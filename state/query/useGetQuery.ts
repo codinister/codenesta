@@ -1,18 +1,14 @@
 'use client'
+
 import { useQuery } from '@tanstack/react-query';
-import fetchApi from './fetchApi';
+import fetch from './fetch';
 
-const useGetQuery = (key: string,url: string) => {
-  const fn = () =>
-    fetchApi({
-      url,
-    });
+const useGetQuery = (url: string, key: string) => {
+  const fn = () => fetch({ url });
 
-  const { data } = useQuery({
-    queryKey: [key],
-    queryFn: fn,
-  });
-  return data?.data || [];
+  const res = useQuery({ queryFn: fn, queryKey: [key] });
+
+  return res;
 };
 
 export default useGetQuery;
