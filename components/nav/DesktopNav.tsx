@@ -2,38 +2,48 @@
 
 import navData from '@/components/nav/navDava';
 import useFetchdata from '@/state/query/useFetchdata';
-import { Link } from 'lucide-react';
+import Link from 'next/link';
 import Image from 'next/image';
+import { usePathname } from 'next/navigation';
 
 const DesktopNav = () => {
+  const path = usePathname();
 
-  const data = useFetchdata('settings', 'settings')
+  const data = useFetchdata('settings', 'settings');
 
   return (
-    <nav>
-      <div className="container py-3 flex justify-between items-center">
-        <div>
-          <Image src={data?.logo || '/empty.png'} alt="logo" width={100} height={70} />
-        </div>
-        <div>
-          <ul className="flex gap-6 ">
-            {Object.values(navData).map(
-              (
-                v: {
-                  name: string;
-                  path: string;
-                },
-                k: number,
-              ) => (
-                <li key={k}>
-                  <Link href={v.path}>{v.name}</Link>
-                </li>
-              ),
-            )}
-          </ul>
-        </div>
+    <div className="sm:flex hidden mx-auto container py-3  justify-between items-center">
+      <div>
+        <Image
+          src={data[0]?.logo || '/empty.png'}
+          alt="logo"
+          width={100}
+          height={70}
+        />
       </div>
-    </nav>
+      <div>
+        <ul className="flex gap-6 ">
+          {navData.map(
+            (
+              v: {
+                name: string;
+                path: string;
+              },
+              k: number,
+            ) => (
+              <li key={k}>
+                <Link
+                  className={`block rounded-3xl px-3 hover:bg-primary hover:text-black ${path === v.path ? 'bg-primary text-black' : 'text-white'}`}
+                  href={v.path}
+                >
+                  {v.name}
+                </Link>
+              </li>
+            ),
+          )}
+        </ul>
+      </div>
+    </div>
   );
 };
 

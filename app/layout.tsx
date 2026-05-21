@@ -1,10 +1,16 @@
 import './globals.css';
 import type { Metadata } from 'next';
 import QueryProvider from '@/state/query/QueryProvider';
-import { Geist } from 'next/font/google';
+import { Roboto } from 'next/font/google';
 import { cn } from '@/lib/utils';
+import Nav from '@/components/nav/Nav';
+import PageTransition from '@/components/pagetransition/PageTransition';
+import StaresTransition from '@/components/pagetransition/StaresTransition';
 
-const geist = Geist({ subsets: ['latin'], variable: '--font-sans' });
+const roboto = Roboto({
+  subsets: ['latin'],
+  weight: ['400', '700'],
+});
 
 export const metadata: Metadata = {
   title: 'Agape Movement',
@@ -48,11 +54,17 @@ export default function RootLayout({
       lang="en"
       data-qb-installed="true"
       suppressHydrationWarning={true}
-      className={cn('font-sans', 'font-sans', geist.variable)}
+      className={roboto.className}
     >
-      <body cz-shortcut-listen="true">
+      <body cz-shortcut-listen="true"
+      
+      
+      >
         <QueryProvider>
-          {children}
+     
+          <Nav />
+               <StaresTransition />
+          <PageTransition>{children}</PageTransition>
         </QueryProvider>
       </body>
     </html>

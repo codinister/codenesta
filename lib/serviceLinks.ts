@@ -8,4 +8,5 @@ export default {
   work: getUrl('work'),
   home: getUrl('home'),
   services: getUrl('services'),
+  settings: getUrl('settings'),
 };

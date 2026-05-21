@@ -1,7 +1,7 @@
 export type HomeType = {
   title: string;
   desc: string;
-  fullName: string;
+  fullname: string;
   image: string;
 
   social: {
@@ -9,9 +9,9 @@ export type HomeType = {
     url: string;
   }[];
 
-  stats: {
-    subTitle: string;
+  stat: {
+    sub_title: string;
     title: string;
     total: number;
   }[];
-};
+}[]
