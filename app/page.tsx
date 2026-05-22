@@ -9,37 +9,84 @@ import { FaDownload } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { LuGithub } from 'react-icons/lu';
+import { motion } from 'motion/react';
+import {
+  custFadeLeft,
+  fadeBottom,
+  fadeLeft,
+  fadeScale,
+  fadeTop,
+  staggerChild,
+} from '@/variants/variants';
 
 const Home = () => {
-  const data: HomeType = useFetchdata("home", "home");
+  const data: HomeType = useFetchdata('home', 'home');
 
   return (
     <div>
-      <div className="mt-6 gap-24 mb-12 mx-auto flex items-center  container">
-        <div className="flex justify-start items-center">
-          <div
-            className="shadow-5xl rounded-full w-75 h-75 border-3 border-white"
+      <div className="p-8 sm:p-0 sm:flex-row flex-col sm:mt-6 sm;gap-24 gap-12 mb-12 mx-auto flex items-center  container">
+        <div className="sm:flex sm:justify-start sm;items-center">
+          <motion.div
+            variants={fadeScale}
+            initial="hidden"
+            animate="visible"
+            className="py-60 sm:py-0 w-85 mx-auto sm:mx-0 shadow-5xl rounded-2xl sm:rounded-full sm:w-75 sm:h-75 border-3 border-white"
             style={{
               backgroundImage: `url(${data[0]?.image})`,
               backgroundSize: 'cover',
               backgroundPosition: 'top',
             }}
-          ></div>
+          ></motion.div>
         </div>
 
         <div>
-          <h5 className="text-white">{data[0]?.title}</h5>
-         
-          <h3 className="text-primary">{data[0]?.fullname}</h3>
-          <p className=" my-6">{data[0]?.desc}</p>
-          <div className="flex gap-6 mt-12">
-            <Button variant="outline">
+          <motion.h5
+            variants={fadeBottom}
+            initial="hidden"
+            animate="visible"
+            className="text-white"
+          >
+            {data[0]?.title}
+          </motion.h5>
+
+          <motion.h3
+            variants={fadeBottom}
+            initial="hidden"
+            animate="visible"
+            className="text-primary"
+          >
+            {data[0]?.fullname}
+          </motion.h3>
+          <motion.p
+            variants={fadeLeft}
+            initial="hidden"
+            animate="visible"
+            className=" my-6"
+          >
+            {data[0]?.desc}
+          </motion.p>
+          <motion.div
+            variants={staggerChild}
+            initial="hidden"
+            animate="visible"
+            className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12"
+          >
+            <Button className="w-40 sm:min-w-auto" variant="outline">
               DOWNLOAD CV
               <FaDownload />
             </Button>
+
             {data[0]?.social.map((v, k) => {
               return (
-                <Link
+                <motion.a
+                  whileHover={{
+                    y:-5,
+                  }}
+                  whileTap={{
+                    scale: 0.7,
+                  }}
+                  custom={Number(k + 1) * 0.4}
+                  variants={custFadeLeft}
                   key={k}
                   href={v.url}
                   title={v.title}
@@ -52,15 +99,17 @@ const Home = () => {
                   ) : (
                     <LuGithub />
                   )}
-                </Link>
+                </motion.a>
               );
             })}
-          </div>
+          </motion.div>
         </div>
       </div>
-      <div className="mx-auto container flex justify-between ">
+      <div className="gap-4 mx-auto container flex sm:justify-between  p-8 sm:p-0 flex-wrap">
         {data[0]?.stat.map((v, k) => (
-          <StatsBox key={k} num={v.total} para1={v.title} para2={v.sub_title} />
+          <div key={k} className="flex-1">
+            <StatsBox num={v.total} para1={v.title} para2={v.sub_title} />
+          </div>
         ))}
       </div>
     </div>

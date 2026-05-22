@@ -35,7 +35,7 @@ const EmailModal = ({ val, setVal }: { val: boolean; setVal: Function }) => {
           className="z-50 fixed inset-0  bg-black/70"
         ></motion.div>
   
-        <EmailForm />
+        <EmailForm  onClick={handleClick} />
       </>
     ) : (
       ''

@@ -56,15 +56,13 @@ export default function RootLayout({
       suppressHydrationWarning={true}
       className={roboto.className}
     >
-      <body cz-shortcut-listen="true"
-      
-      
-      >
+      <body cz-shortcut-listen="true">
         <QueryProvider>
-     
-          <Nav />
-               <StaresTransition />
-          <PageTransition>{children}</PageTransition>
+          <StaresTransition />
+          <PageTransition>
+            <Nav />
+            {children}
+          </PageTransition>
         </QueryProvider>
       </body>
     </html>

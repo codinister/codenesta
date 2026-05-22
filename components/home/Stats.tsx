@@ -8,7 +8,7 @@ const Stat = ({ num }: { num: number }) => {
       end={num}
       duration={5}
       delay={2}
-      className="text-4xl sm:text-5xl font-extrabold"
+      className="text-5xl font-extrabold"
     />
   );
 };
