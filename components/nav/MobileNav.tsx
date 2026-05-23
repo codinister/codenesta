@@ -52,7 +52,7 @@ const MobileNav = () => {
                   k: number,
                 ) => (
                   <motion.li
-                    custom={Number(k + 1) * 0.4}
+                    custom={Number(k) * 0.2}
                     variants={custFadeLeft}
                     key={k}
                   >
