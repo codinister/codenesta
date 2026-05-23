@@ -77,6 +77,10 @@ const Home = () => {
               variants={custFadeLeft}
               initial="hidden"
               whileInView="visible"
+              viewport={{
+                amount: 0.3,
+                once: true,
+              }}
               className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
             >
               DOWNLOAD CV
@@ -96,6 +100,10 @@ const Home = () => {
                   variants={custFadeLeft}
                   initial="hidden"
                   whileInView="visible"
+                  viewport={{
+                    amount: 0.3,
+                    once: true,
+                  }}
                   key={k}
                   href={v.url}
                   title={v.title}
