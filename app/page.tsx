@@ -71,9 +71,9 @@ const Home = () => {
                 y: -5,
               }}
               whileTap={{
-                scale: 0.7,
+                scale: 0.9,
               }}
-              custom={1.7}
+              custom={1}
               variants={custFadeLeft}
               initial="hidden"
               whileInView="visible"
@@ -94,9 +94,9 @@ const Home = () => {
                     y: -5,
                   }}
                   whileTap={{
-                    scale: 0.7,
+                    scale: 0.9,
                   }}
-                  custom={Number(k + 1) * 0.8}
+                  custom={Number(k + 1) * 0.2}
                   variants={custFadeLeft}
                   initial="hidden"
                   whileInView="visible"

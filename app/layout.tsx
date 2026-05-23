@@ -13,24 +13,24 @@ const roboto = Roboto({
 });
 
 export const metadata: Metadata = {
-  title: 'Agape Movement',
-  description: `Agape Movement is a wellness and wholeness community for adults at every stage of life. This space supports personal growth, healthy relationships, marriage, healing after divorce, mental and emotional well-being, parenting, and healthy living.
+  title: 'CODENESTA',
+  description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.
   `,
 
-  metadataBase: new URL('https://agapemovementus.org'), // 🔥 IMPORTANT
+  metadataBase: new URL('https://codenesta.com'), // 🔥 IMPORTANT
 
   openGraph: {
-    title: 'Agape Movement',
-    description: `Agape Movement is a wellness and wholeness community for adults at every stage of life. This space supports personal growth, healthy relationships, marriage, healing after divorce, mental and emotional well-being, parenting, and healthy living.
+    title: 'CODENESTA',
+    description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.
     `,
-    url: 'https://agapemovementus.org',
-    siteName: 'Agape Movement',
+    url: 'https://codenesta.com',
+    siteName: 'CODENESTA',
     images: [
       {
         url: '/logo.png', // will resolve with metadataBase
         width: 1200,
         height: 630,
-        alt: 'Agape Movement',
+        alt: 'Codenesta logo',
       },
     ],
     type: 'website',
@@ -38,8 +38,8 @@ export const metadata: Metadata = {
 
   twitter: {
     card: 'summary_large_image',
-    title: 'Agape Movement',
-    description: `Agape Movement is a wellness and wholeness community for adults at every stage of life. This space supports personal growth, healthy relationships, marriage, healing after divorce, mental and emotional well-being, parenting, and healthy living.`,
+    title: 'CODENESTA',
+    description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.`,
     images: ['/logo.png'],
   },
 };
