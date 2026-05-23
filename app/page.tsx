@@ -68,7 +68,7 @@ const Home = () => {
           <motion.div className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
             <motion.button
               whileHover={{
-                y: -5,
+                y: -2,
               }}
               whileTap={{
                 scale: 0.9,
@@ -91,7 +91,7 @@ const Home = () => {
               return (
                 <motion.a
                   whileHover={{
-                    y: -5,
+                    y: -2,
                   }}
                   whileTap={{
                     scale: 0.9,
