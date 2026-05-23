@@ -17,8 +17,8 @@ const StatsBox = ({
         <Stat num={num} />
       </div>
       <div>
-        <p className="text-white text-left sm:text-4 text-2">{para1}</p>
-        <p className="text-white text-left sm:text-4 text-2">{para2}</p>
+        <p className="text-white text-left sm:text-4 text-1">{para1}</p>
+        <p className="text-white text-left sm:text-4 text-1">{para2}</p>
       </div>
     </div>
   );
