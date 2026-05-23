@@ -80,7 +80,7 @@ const Home = () => {
               }}
               custom={1.5}
               variants={custFadeLeft}
-              className="flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
+              className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
             >
               DOWNLOAD CV
               <FaDownload />
@@ -100,7 +100,7 @@ const Home = () => {
                   key={k}
                   href={v.url}
                   title={v.title}
-                  className="hover:border-white hover:text-white text-primary sm:w-10 sm:h-10 w-7 h-7 rounded-full border border-primary flex items-center justify-center"
+                  className="hover:border-white hover:text-white text-primary sm:w-10 sm:h-10 w-7 h-7 rounded-full border border-primary flex items-center justify-center sm:text-4 text-1"
                 >
                   {v.title === 'Facebook' ? (
                     <FaFacebookF />
