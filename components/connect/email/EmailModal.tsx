@@ -3,7 +3,9 @@
 import { createPortal } from 'react-dom';
 import EmailForm from './EmailForm';
 import { useEffect, useState } from 'react';
-import { AnimatePresence, motion } from 'motion/react';
+import { motion } from 'motion/react';
+import { useMediaQuery } from 'react-responsive';
+
 
 const EmailModal = ({ val, setVal }: { val: boolean; setVal: Function }) => {
   const [pageReady, setPageReady] = useState(false);
@@ -12,9 +14,15 @@ const EmailModal = ({ val, setVal }: { val: boolean; setVal: Function }) => {
     setPageReady(true);
   }, []);
 
+
+  
+const isMobile = useMediaQuery({
+  maxWidth: 768,
+});
+
   const ModalBox = () => {
     const handleClick = () => {
-      //document.body.style.overflowY = 'scroll';
+     isMobile ? document.body.style.overflowY = 'scroll' : ''
       setVal(false);
     };
 
