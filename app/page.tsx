@@ -65,12 +65,7 @@ const Home = () => {
           >
             {data[0]?.desc}
           </motion.p>
-          <motion.div
-            variants={staggerChild}
-            initial="hidden"
-            animate="visible"
-            className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12"
-          >
+          <motion.div className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
             <motion.button
               whileHover={{
                 y: -5,
@@ -78,8 +73,10 @@ const Home = () => {
               whileTap={{
                 scale: 0.7,
               }}
-              custom={1.5}
+              custom={1.7}
               variants={custFadeLeft}
+              initial="hidden"
+              whileInView="visible"
               className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
             >
               DOWNLOAD CV
@@ -95,8 +92,10 @@ const Home = () => {
                   whileTap={{
                     scale: 0.7,
                   }}
-                  custom={Number(k + 1) * 0.6}
+                  custom={Number(k + 1) * 0.8}
                   variants={custFadeLeft}
+                  initial="hidden"
+                  whileInView="visible"
                   key={k}
                   href={v.url}
                   title={v.title}
