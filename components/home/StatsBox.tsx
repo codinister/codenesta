@@ -12,7 +12,7 @@ const StatsBox = ({
   para2: string;
 }) => {
   return (
-    <div className="flex justify-start flex-col sm:flex-row items-center sm:gap-4 gap-2">
+    <div className="flex justify-start flex-col sm:flex-row sm:items-center sm:gap-4 gap-2">
       <div className="text-white">
         <Stat num={num} />
       </div>
