@@ -24,7 +24,7 @@ const Home = () => {
 
   return (
     <div>
-      <div className="px-8 sm:px-0 sm:flex-row flex-col sm:mt-6 sm;gap-24 gap-12 mb-12 mx-auto flex items-center  container">
+      <div className="px-8 sm:px-0 sm:flex-row flex-col sm:mt-6 sm;gap-24 gap-12 mb-8 sm:mb-12 mx-auto flex items-center  container">
         <div className="sm:flex sm:justify-start sm:items-center">
           <motion.div
             variants={fadeScale}
@@ -115,7 +115,7 @@ const Home = () => {
           </motion.div>
         </div>
       </div>
-      <div className="gap-4 mx-auto container flex sm:justify-between   p-8 sm:p-0 flex-wrap">
+      <div className="gap-6 mx-auto container flex sm:justify-between   p-8 sm:p-0 flex-wrap">
         {data[0]?.stat.map((v, k) => (
           <div key={k} className="flex-1">
             <StatsBox num={v.total} para1={v.title} para2={v.sub_title} />
