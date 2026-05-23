@@ -78,7 +78,7 @@ const Home = () => {
               whileTap={{
                 scale: 0.7,
               }}
-              custom={0.1}
+              custom={1.5}
               variants={custFadeLeft}
               className="flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-40 sm:min-w-auto"
             >
@@ -95,7 +95,7 @@ const Home = () => {
                   whileTap={{
                     scale: 0.7,
                   }}
-                  custom={Number(k + 1) * 0.4}
+                  custom={Number(k + 1) * 0.6}
                   variants={custFadeLeft}
                   key={k}
                   href={v.url}
