@@ -6,7 +6,7 @@ import Link from 'next/link';
 import Image from 'next/image';
 import { usePathname } from 'next/navigation';
 import { motion } from 'motion/react';
-import { custFadeLeft, fadeBottom, fadeTop, staggerChild } from '@/variants/variants';
+import { custFadeBottom, fadeBottom, fadeTop, staggerChild } from '@/variants/variants';
 
 const DesktopNav = () => {
   const path = usePathname();
@@ -47,7 +47,7 @@ const DesktopNav = () => {
                 scale: 0.8
               }}
               custom={Number(k+1) * 0.4}
-              variants={custFadeLeft}
+              variants={custFadeBottom}
               key={k}>
                 <Link
                   className={`block rounded-3xl px-3 hover:bg-primary hover:text-black ${path === v.path ? 'bg-primary text-black' : 'text-white'}`}
