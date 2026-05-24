@@ -93,7 +93,7 @@ const Home = () => {
                   initial="hidden"
                   whileInView="visible"
                   viewport={{
-                    amount: 1.3,
+                    amount: 1,
                     once: true,
                   }}
                   key={k}
