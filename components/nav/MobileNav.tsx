@@ -19,11 +19,11 @@ const MobileNav = () => {
   const data = useFetchdata('settings', 'settings');
 
   return (
-    <div className="block sm:hidden">
+    <div className="block sm:hidden fixed left-8 top-8">
       <Sheet open={open} onOpenChange={setOpen}>
         <SheetTrigger>
           <Title></Title>
-          <CiMenuBurger className="ml-8 mt-8 text-3xl font-bold text-white" />
+          <CiMenuBurger className="text-3xl font-bold text-white" />
         </SheetTrigger>
         <SheetContent side="left" className="w-80">
           <div className="bg-[#1b1b23] p-8 h-screen">
