@@ -30,7 +30,7 @@ const Home = () => {
             variants={fadeScale}
             initial="hidden"
             animate="visible"
-            className="w-80 h-80 sm:py-0 shadow-5xl rounded-2xl sm:rounded-full sm:w-75 sm:h-75"
+            className="w-80 h-80 mt-8 sm:mt-0 shadow-5xl rounded-2xl sm:rounded-full sm:w-75 sm:h-75"
             style={{
               backgroundImage: `url(${data[0]?.image})`,
               backgroundSize: 'cover',
