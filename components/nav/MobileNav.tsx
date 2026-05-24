@@ -10,7 +10,7 @@ import { usePathname } from 'next/navigation';
 import { Title } from '@radix-ui/react-dialog';
 import { CiMenuBurger } from 'react-icons/ci';
 import { motion } from 'motion/react';
-import { custFadeLeft, staggerChild } from '@/variants/variants';
+import { custFadeBottom, staggerChild } from '@/variants/variants';
 
 const MobileNav = () => {
   const [open, setOpen] = useState(false);
@@ -53,7 +53,7 @@ const MobileNav = () => {
                 ) => (
                   <motion.li
                     custom={Number(k) * 0.1}
-                    variants={custFadeLeft}
+                    variants={custFadeBottom}
                     key={k}
                   >
                     <Link

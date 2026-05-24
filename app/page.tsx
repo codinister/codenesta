@@ -1,22 +1,18 @@
 'use client';
 
 import StatsBox from '@/components/home/StatsBox';
-import { Button } from '@/components/ui/button';
 import useFetchdata from '@/state/query/useFetchdata';
 import { HomeType } from '@/types/types';
-import Link from 'next/link';
 import { FaDownload } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { LuGithub } from 'react-icons/lu';
 import { motion } from 'motion/react';
 import {
-  custFadeLeft,
+  custFadeBottom,
   fadeBottom,
   fadeLeft,
   fadeScale,
-  fadeTop,
-  staggerChild,
 } from '@/variants/variants';
 
 const Home = () => {
@@ -74,7 +70,7 @@ const Home = () => {
                 scale: 0.9,
               }}
               custom={2.2}
-              variants={custFadeLeft}
+              variants={custFadeBottom}
               initial="hidden"
               whileInView="visible"
               viewport={{
@@ -97,7 +93,7 @@ const Home = () => {
                     scale: 0.9,
                   }}
                   custom={Number(k + 1) * 0.2}
-                  variants={custFadeLeft}
+                  variants={custFadeBottom}
                   initial="hidden"
                   whileInView="visible"
                   viewport={{

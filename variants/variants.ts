@@ -3,14 +3,14 @@ import { type Variants } from 'motion/react';
 
 //x
 
-export const custFadeLeft: custFadeLeftType = {
+export const custFadeBottom: custFadeLeftType = {
   hidden: {
     opacity: 0,
-    x: 60,
+    y: -60,
   },
   visible: (delay = 0) => ({
     opacity: 1,
-    x: 0,
+    y: 0,
     transition: {
       delay,
       ease: 'easeOut',

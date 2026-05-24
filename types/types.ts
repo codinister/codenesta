@@ -2,11 +2,11 @@
 export type custFadeLeftType = {
   hidden: {
     opacity: number;
-    x: number;
+    y: number;
   };
   visible: (delay: number) => {
     opacity: number;
-    x: number;
+    y: number;
     transition: {
       delay: number;
       ease: 'easeOut';
