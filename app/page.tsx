@@ -8,7 +8,7 @@ import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { LuGithub } from 'react-icons/lu';
 import { motion, useInView } from 'motion/react';
-import {useRef} from 'react'
+import { useRef } from 'react';
 import {
   custFadeBottom,
   fadeBottom,
@@ -18,11 +18,11 @@ import {
 
 const Home = () => {
   const data: HomeType = useFetchdata('home', 'home');
-const ref = useRef(null)
-const isInView = useInView(ref, {
-      margin: '-30px',
-  once: true
-})
+  const ref = useRef(null);
+  const isInView = useInView(ref, {
+    margin: '30px',
+    once: true,
+  });
   return (
     <div>
       <div className="px-8 sm:px-0 sm:flex-row flex-col sm:mt-6 sm;gap-24 gap-12 mb-8 sm:mb-12 mx-auto flex items-center  container">
@@ -66,52 +66,58 @@ const isInView = useInView(ref, {
           >
             {data[0]?.desc}
           </motion.p>
-          <div ref={ref} className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
-            { isInView && <motion.button
-              whileHover={{
-                y: -3,
-              }}
-              whileTap={{
-                scale: 0.9,
-              }}
-              custom={2}
-              variants={custFadeBottom}
-              initial="hidden"
-              animate="visible"
-              className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
-            >
-              DOWNLOAD CV
-              <FaDownload />
-            </motion.button> }
+          <div
+            ref={ref}
+            className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12"
+          >
+            {isInView && (
+              <motion.button
+                whileHover={{
+                  y: -3,
+                }}
+                whileTap={{
+                  scale: 0.9,
+                }}
+                custom={2}
+                variants={custFadeBottom}
+                initial="hidden"
+                animate="visible"
+                className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
+              >
+                DOWNLOAD CV
+                <FaDownload />
+              </motion.button>
+            )}
 
-            {isInView && data[0]?.social.map((v, k) => {
-              return (
-                <motion.a
-                  whileHover={{
-                    y: -3,
-                  }}
-                  whileTap={{
-                    scale: 0.9,
-                  }}
-                  custom={Number(k + 1) * 0.2}
-                  variants={custFadeBottom}
-                  initial="hidden"
-                  animate="visible"
-                  key={k}
-                  href={v.url}
-                  title={v.title}
-                  className="hover:border-white hover:text-white text-primary sm:w-10 sm:h-10 w-7 h-7 rounded-full border border-primary flex items-center justify-center sm:text-4 text-1"
-                >
-                  {v.title === 'Facebook' ? (
-                    <FaFacebookF />
-                  ) : v.title === 'Linkedin' ? (
-                    <FaLinkedinIn />
-                  ) : (
-                    <LuGithub />
-                  )}
-                </motion.a>
-              );
-            })}
+            {isInView &&
+              data[0]?.social.map((v, k) => {
+                return (
+                  <motion.a
+                    whileHover={{
+                      y: -3,
+                    }}
+                    whileTap={{
+                      scale: 0.9,
+                    }}
+                    custom={Number(k + 1) * 0.2}
+                    variants={custFadeBottom}
+                    initial="hidden"
+                    animate="visible"
+                    key={k}
+                    href={v.url}
+                    title={v.title}
+                    className="hover:border-white hover:text-white text-primary sm:w-10 sm:h-10 w-7 h-7 rounded-full border border-primary flex items-center justify-center sm:text-4 text-1"
+                  >
+                    {v.title === 'Facebook' ? (
+                      <FaFacebookF />
+                    ) : v.title === 'Linkedin' ? (
+                      <FaLinkedinIn />
+                    ) : (
+                      <LuGithub />
+                    )}
+                  </motion.a>
+                );
+              })}
           </div>
         </div>
       </div>
