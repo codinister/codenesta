@@ -7,7 +7,8 @@ import { FaDownload } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { LuGithub } from 'react-icons/lu';
-import { motion } from 'motion/react';
+import { motion, useInView } from 'motion/react';
+import {useRef} from 'react'
 import {
   custFadeBottom,
   fadeBottom,
@@ -17,7 +18,11 @@ import {
 
 const Home = () => {
   const data: HomeType = useFetchdata('home', 'home');
-
+const ref = useRef(null)
+const isInView = useInView(ref, {
+  amount: -30, 
+  once: true
+})
   return (
     <div>
       <div className="px-8 sm:px-0 sm:flex-row flex-col sm:mt-6 sm;gap-24 gap-12 mb-8 sm:mb-12 mx-auto flex items-center  container">
@@ -61,8 +66,8 @@ const Home = () => {
           >
             {data[0]?.desc}
           </motion.p>
-          <motion.div className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
-            <motion.button
+          <div ref={ref} className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
+            { isInView && <motion.button
               whileHover={{
                 y: -3,
               }}
@@ -72,18 +77,14 @@ const Home = () => {
               custom={2}
               variants={custFadeBottom}
               initial="hidden"
-              whileInView="visible"
-              viewport={{
-                amount: 0.3,
-                once: true,
-              }}
+              animate="visible"
               className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
             >
               DOWNLOAD CV
               <FaDownload />
-            </motion.button>
+            </motion.button> }
 
-            {data[0]?.social.map((v, k) => {
+            {isInView && data[0]?.social.map((v, k) => {
               return (
                 <motion.a
                   whileHover={{
@@ -95,11 +96,7 @@ const Home = () => {
                   custom={Number(k + 1) * 0.2}
                   variants={custFadeBottom}
                   initial="hidden"
-                  whileInView="visible"
-                  viewport={{
-                    amount: 0.3,
-                    once: true,
-                  }}
+                  animate="visible"
                   key={k}
                   href={v.url}
                   title={v.title}
@@ -115,7 +112,7 @@ const Home = () => {
                 </motion.a>
               );
             })}
-          </motion.div>
+          </div>
         </div>
       </div>
       <div className="gap-4 mx-auto container flex sm:justify-between   p-8 sm:p-0 flex-wrap">
