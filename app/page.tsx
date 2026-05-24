@@ -73,7 +73,7 @@ const Home = () => {
               whileTap={{
                 scale: 0.9,
               }}
-              custom={1.9}
+              custom={2.2}
               variants={custFadeLeft}
               initial="hidden"
               whileInView="visible"

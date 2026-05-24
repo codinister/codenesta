@@ -5,7 +5,6 @@ import Stat from './Stats';
 import { useRef } from 'react';
 import { useInView } from 'motion/react';
 
-import { motion } from 'motion/react';
 
 const StatsBox = ({
   num,
