@@ -64,12 +64,12 @@ const Home = () => {
           <motion.div className="flex justify-start flex-wrap sm:gap-6 gap-4 mt-12">
             <motion.button
               whileHover={{
-                y: -2,
+                y: -3,
               }}
               whileTap={{
                 scale: 0.9,
               }}
-              custom={2.2}
+              custom={2}
               variants={custFadeBottom}
               initial="hidden"
               whileInView="visible"
@@ -87,7 +87,7 @@ const Home = () => {
               return (
                 <motion.a
                   whileHover={{
-                    y: -2,
+                    y: -3,
                   }}
                   whileTap={{
                     scale: 0.9,
