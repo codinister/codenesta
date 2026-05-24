@@ -6,7 +6,7 @@ import { type Variants } from 'motion/react';
 export const custFadeBottom: custFadeLeftType = {
   hidden: {
     opacity: 0,
-    y: -60,
+    y: 60,
   },
   visible: (delay = 0) => ({
     opacity: 1,
