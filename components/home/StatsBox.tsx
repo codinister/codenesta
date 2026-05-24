@@ -27,7 +27,7 @@ const StatsBox = ({
       ref={ref}
       className="flex justify-start flex-col sm:flex-row sm:items-center sm:gap-4 gap-2"
     >
-      <div className="text-white">{isInView && <Stat num={num} />+'+'}</div>
+      <div className="text-white">{isInView && <Stat num={num} />+'<span className="sm:text-5xl text-4xl font-extrabold">+</span>'}</div>
       <div>
         <p className="text-white text-left">{para1}</p>
         <p className="text-white text-left">{para2}</p>
