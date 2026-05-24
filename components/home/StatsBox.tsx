@@ -20,7 +20,7 @@ const StatsBox = ({
 
   const isInView = useInView(ref, {
     once: true,
-    margin: '-100px',
+    margin: '-30px',
   });
 
   return (
