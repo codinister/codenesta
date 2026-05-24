@@ -20,7 +20,7 @@ const Home = () => {
   const data: HomeType = useFetchdata('home', 'home');
   const ref = useRef(null);
   const isInView = useInView(ref, {
-    margin: '70px',
+    margin: '120px',
     once: true,
   });
   return (
