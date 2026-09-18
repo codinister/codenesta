@@ -8,7 +8,7 @@ export const revalidate = 0
 
 export async function GET(req: NextRequest) {
   try {
-    await csrfValidation(req);
+    await csrfValidation();
     const result = await redisCache('skills', skillsData);
     return NextResponse.json(result);
   } catch (error: any) {
