@@ -1,6 +1,7 @@
 import { redis } from './redisConfig';
 
 const redisCache = async (key: string, cb: Function) => {
+
   const data = await redis.get(key);
 
   if (data !== null) {
@@ -12,6 +13,7 @@ const redisCache = async (key: string, cb: Function) => {
     });
     return result;
   }
+  
 };
 
 export default redisCache;

@@ -75,7 +75,7 @@ const Home = () => {
               animate="visible"
               className="text-1 sm:text-4 flex gap-2 justify-center items-center border border-primary rounded-2xl text-primary hover:bg-white hover:text-black w-38 sm:min-w-auto"
             >
-              DOWNLOAD CV
+              CV
               <FaDownload />
             </motion.button>
 

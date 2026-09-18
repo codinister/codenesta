@@ -2,7 +2,8 @@ import { headers } from 'next/headers';
 import { NextRequest } from 'next/server';
 import csrfKey from './csrfKey';
 
-const csrfValidation = async (req: NextRequest) => {
+const csrfValidation = async () => {
+  
   const apiKey = csrfKey()
   const header = await headers();
   const api_key = header.get('x-api-key');

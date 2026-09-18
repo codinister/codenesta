@@ -20,7 +20,8 @@ export async function GET(
   const param = (await params).path;
 
   try {
-    await csrfValidation(req);
+
+    await csrfValidation();
     await rateLimit();
 
     const { url } = serviceRoutes(param);
@@ -42,7 +43,7 @@ export async function GET(
 
 export async function POST(req: NextRequest, params: any) {
   try {
-    await csrfValidation(req);
+    await csrfValidation();
   } catch (error) {
     return NextResponse.json({
       status: 400,

@@ -2,10 +2,10 @@ import './globals.css';
 import type { Metadata } from 'next';
 import QueryProvider from '@/state/query/QueryProvider';
 import { Roboto } from 'next/font/google';
-import { cn } from '@/lib/utils';
 import Nav from '@/components/nav/Nav';
 import PageTransition from '@/components/pagetransition/PageTransition';
 import StaresTransition from '@/components/pagetransition/StaresTransition';
+import  {Analytics}  from '@vercel/analytics/next';
 
 const roboto = Roboto({
   subsets: ['latin'],
@@ -57,6 +57,7 @@ export default function RootLayout({
       className={roboto.className}
     >
       <body cz-shortcut-listen="true">
+        <Analytics />
         <QueryProvider>
           <StaresTransition />
           <PageTransition>
