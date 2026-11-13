@@ -12,16 +12,17 @@ const roboto = Roboto({
   weight: ['400', '700'],
 });
 
+
 export const metadata: Metadata = {
   title: 'CODENESTA',
-  description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.
+  description: `Web Designer in Accra, Website Developer in Accra Ghana, Web Design Company in Kumasi, Website Design and Development Ghana, E-commerce Website Development Ghana, Custom Web Application Development Ghana, Professional Website Designer Ghana
   `,
 
   metadataBase: new URL('https://codenesta.com'), // 🔥 IMPORTANT
 
   openGraph: {
     title: 'CODENESTA',
-    description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.
+    description: `Web Designer in Accra, Website Developer in Accra Ghana, Web Design Company in Kumasi, Website Design and Development Ghana, E-commerce Website Development Ghana, Custom Web Application Development Ghana, Professional Website Designer Ghana
     `,
     url: 'https://codenesta.com',
     siteName: 'CODENESTA',
@@ -39,7 +40,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'CODENESTA',
-    description: `I specialize in creating refined digital experiences and have strong expertise across multiple programming languages and technologies.`,
+    description: `Web Designer in Accra, Website Developer in Accra Ghana, Web Design Company in Kumasi, Website Design and Development Ghana, E-commerce Website Development Ghana, Custom Web Application Development Ghana, Professional Website Designer Ghana`,
     images: ['/logo.png'],
   },
 };
